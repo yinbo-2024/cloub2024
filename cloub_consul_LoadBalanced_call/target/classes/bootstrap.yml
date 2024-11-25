@@ -1,0 +1,17 @@
+#服务注册
+spring:
+  application:
+    name: cloub-consul-loadbalanced-call
+
+  cloud:
+    consul:
+      host: localhost
+      port: 8500
+      discovery:
+        service-name: ${spring.application.name}
+      #远程从 consul上 取配置文件  服务名-dev/prod
+      config:
+        profile-separator: '-'
+        format: YAML
+#        watch:
+#          wait-time: 1 # 刷新时间

@@ -1,0 +1,7 @@
+com\atguigu\cloub\config\FeignConfig.class
+com\atguigu\cloub\controller\CircuitTestController.class
+com\atguigu\cloub\controller\PayConsulController.class
+com\atguigu\cloub\controller\ZipKinlController.class
+com\atguigu\cloub\Main9004.class
+com\atguigu\cloub\controller\BulkheadTestController.class
+com\atguigu\cloub\controller\GateWayController.class

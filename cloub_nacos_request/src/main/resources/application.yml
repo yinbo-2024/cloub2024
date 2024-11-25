@@ -1,0 +1,21 @@
+#服务端口号
+server:
+  port: 8002
+#服务名称
+spring:
+#  datasource:
+#    type: com.alibaba.druid.pool.DruidDataSource # 设置类型为 DruidDataSource
+#    driver-class-name: com.mysql.jdbc.Driver # 数据库连接驱动
+#    url: jdbc:mysql://localhost:3306/db2024?useSSL=false&useUnicode=true&characterEncoding=UTF-8
+#    username: root
+#    password: root
+
+service-url:
+  cloub-nacos-dao: http://cloub-nacos-dao
+
+##mybatis 初始化 xml 位置
+#mybatis:
+#  mapper-locations: classpath:mapper/*.xml
+#  type-aliases-package:
+#  configuration:
+#    map-underscore-to-camel-case: true

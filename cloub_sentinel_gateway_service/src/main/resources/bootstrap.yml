@@ -1,0 +1,27 @@
+#服务名称
+spring:
+  application:
+    name: cloub-sentinel-gateway-service
+  cloud:
+    nacos:
+      config:
+        import-check:
+          enabled: false
+      discovery:
+        server-addr: localhost:8848 # 服务注册地址
+##  sentinel 服务降级 服务 熔断 限流
+#    sentinel:
+#      transport:
+#        dashboard: localhost:8080  #  控制台 服务地址
+#        port: 8719  # 端口累加 如果 端口被占用 每次 加 1(+1) 直到找到不被占用的接口
+#      web-context-unify: false # controller 进入 service 被人定为不是同一个链路
+##      # 将sentinel 配置的额 数据 持久化到 nacos库中
+##      datasource:
+##        ds1:
+##          nacos:
+##            serverAddr:  localhost:8848
+##            dataId: ${spring.application.name}
+##            groupId: DEFAULT_GROUP
+##            dataType: json
+##            ruleType: flow
+

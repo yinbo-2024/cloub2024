@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.atguigu.cloub.mapper.TStorageMapper">
+
+    <!-- 通用设置 -->
+        <!-- 通用查询列 -->
+        <sql id="Base_Column_List">
+            id, product_id, total, used, residue
+        </sql>
+
+        <!-- 通用条件列 -->
+        <sql id="TStorageByCondition">
+                    <if test="productId!=null and productId!=''">
+                        AND product_id = #{productId}
+                    </if>
+                    <if test="total!=null and total!=''">
+                        AND total = #{total}
+                    </if>
+                    <if test="used!=null and used!=''">
+                        AND used = #{used}
+                    </if>
+                    <if test="residue!=null and residue!=''">
+                        AND residue = #{residue}
+                    </if>
+        </sql>
+
+        <!-- 通用设置列 -->
+        <sql id="TStorageSetColumns">
+                    <if test="productId!=null and productId!=''">
+                        product_id = #{productId},
+                    </if>
+                    <if test="total!=null and total!=''">
+                        total = #{total},
+                    </if>
+                    <if test="used!=null and used!=''">
+                        used = #{used},
+                    </if>
+                    <if test="residue!=null and residue!=''">
+                        residue = #{residue},
+                    </if>
+        </sql>
+
+        <!-- 通用查询映射结果 -->
+        <resultMap id="TStorageMap" type="com.atguigu.cloub.entity.TStorage">
+                    <id column="id" property="id"/>
+                    <result column="product_id" property="productId"/>
+                    <result column="total" property="total"/>
+                    <result column="used" property="used"/>
+                    <result column="residue" property="residue"/>
+        </resultMap>
+
+    <!-- 查询表t_storage所有信息 -->
+    <select id="findAllTStorage" resultMap="TStorageMap">
+        SELECT
+        <include refid="Base_Column_List"/>
+        FROM t_storage
+    </select>
+
+            <!-- 根据主键id查询表t_storage信息 -->
+            <select id="findTStorageByid" resultMap="TStorageMap">
+                SELECT
+                <include refid="Base_Column_List"/>
+                FROM t_storage
+                WHERE id=#{id}
+            </select>
+
+    <!-- 根据条件查询表t_storage信息 -->
+    <select id="findTStorageByCondition" resultMap="TStorageMap">
+        SELECT
+        <include refid="Base_Column_List"/>
+        FROM t_storage
+        WHERE 1=1
+        <include refid="TStorageByCondition" />
+    </select>
+
+            <!-- 根据主键id删除表t_storage信息 -->
+            <delete id="deleteTStorageByid">
+                DELETE FROM
+                t_storage
+                WHERE id=#{id}
+            </delete>
+
+            <!-- 根据主键id更新表t_storage信息 -->
+            <update id="updateTStorageByid" parameterType="com.atguigu.cloub.entity.TStorage">
+                UPDATE t_storage
+                <set>
+                    <include refid="TStorageSetColumns"/>
+                </set>
+                WHERE
+                id=#{id}
+            </update>
+
+            <!-- 新增表t_storage信息 -->
+            <insert id="addTStorage">
+                INSERT INTO t_storage (
+                    id
+                    ,product_id
+                    ,total
+                    ,used
+                    ,residue
+                ) VALUES (
+                    #{id}
+                    ,#{productId}
+                    ,#{total}
+                    ,#{used}
+                    ,#{residue}
+                )
+            </insert>
+</mapper>

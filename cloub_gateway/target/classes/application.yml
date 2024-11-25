@@ -1,0 +1,43 @@
+server:
+  port: 9527
+
+#网关配置
+spring:
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+#      路由 配置
+      routes:
+#        - id: rout1
+#            #  uri: http://localhost:9001
+#          uri: lb://cloub-consul-dao
+#          predicates:
+#            - Path=/gateway/gateway2024Byid/**
+#            - After=2024-11-21T03:47:54.598+08:00[Asia/Shanghai]
+#            - My=yinbo
+#              #  自定义 路由断言 两种 区别 短链接
+#              #            - name: My
+##              args:
+##                userType: yinbo
+        - id: rout2
+          #  uri: http://localhost:9001
+          uri: lb://cloub-consul-dao
+          predicates:
+            - Path=/gateway/gatewayHead/**
+#            - Path=/pay/{filter} # 说明：  /pay 开头 后边跟 /{xxx} 只要 经过替换后 有其接口 都可访问到
+          #  - Path=/pay/abc/{filter}
+#            - Path=/gatewayHead/**
+          filters:
+            - My=YinBo
+#            - RedirectTo=302,http://www.atguigu.com/
+#            - SetPath=/gateway/gatewayHead/{filter}  #{xxx} 为需要替换的值   经过替换后 有其接口 都可访问到
+#            - SetPath=/gateway/gatewayHead/{filter}
+#            - PrefixPath=/gateway
+#            - AddRequestParameter=YinBo,yin
+#            - AddRequestHeader=X-Request-yin,yin
+#            - AddRequestHeader=X-Request-bo,bo
+#            - RemoveRequestHeader=sec-fetch-site
+#            - SetRequestHeader=sec-fetch-mode,setByNameYinBo
+

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.atguigu.cloub.mapper.TAccountMapper">
+
+    <!-- 通用设置 -->
+        <!-- 通用查询列 -->
+        <sql id="Base_Column_List">
+            id, user_id, total, used, residue
+        </sql>
+
+        <!-- 通用条件列 -->
+        <sql id="TAccountByCondition">
+                    <if test="userId!=null and userId!=''">
+                        AND user_id = #{userId}
+                    </if>
+                    <if test="total!=null and total!=''">
+                        AND total = #{total}
+                    </if>
+                    <if test="used!=null and used!=''">
+                        AND used = #{used}
+                    </if>
+                    <if test="residue!=null and residue!=''">
+                        AND residue = #{residue}
+                    </if>
+        </sql>
+
+        <!-- 通用设置列 -->
+        <sql id="TAccountSetColumns">
+                    <if test="userId!=null and userId!=''">
+                        user_id = #{userId},
+                    </if>
+                    <if test="total!=null and total!=''">
+                        total = #{total},
+                    </if>
+                    <if test="used!=null and used!=''">
+                        used = #{used},
+                    </if>
+                    <if test="residue!=null and residue!=''">
+                        residue = #{residue},
+                    </if>
+        </sql>
+
+        <!-- 通用查询映射结果 -->
+        <resultMap id="TAccountMap" type="com.atguigu.cloub.entity.TAccount">
+                    <id column="id" property="id"/>
+                    <result column="user_id" property="userId"/>
+                    <result column="total" property="total"/>
+                    <result column="used" property="used"/>
+                    <result column="residue" property="residue"/>
+        </resultMap>
+
+    <!-- 查询表t_account所有信息 -->
+    <select id="findAllTAccount" resultMap="TAccountMap">
+        SELECT
+        <include refid="Base_Column_List"/>
+        FROM t_account
+    </select>
+
+            <!-- 根据主键id查询表t_account信息 -->
+            <select id="findTAccountByid" resultMap="TAccountMap">
+                SELECT
+                <include refid="Base_Column_List"/>
+                FROM t_account
+                WHERE id=#{id}
+            </select>
+
+    <!-- 根据条件查询表t_account信息 -->
+    <select id="findTAccountByCondition" resultMap="TAccountMap">
+        SELECT
+        <include refid="Base_Column_List"/>
+        FROM t_account
+        WHERE 1=1
+        <include refid="TAccountByCondition" />
+    </select>
+
+            <!-- 根据主键id删除表t_account信息 -->
+            <delete id="deleteTAccountByid">
+                DELETE FROM
+                t_account
+                WHERE id=#{id}
+            </delete>
+
+            <!-- 根据主键id更新表t_account信息 -->
+            <update id="updateTAccountByid" parameterType="com.atguigu.cloub.entity.TAccount">
+                UPDATE t_account
+                <set>
+                    <include refid="TAccountSetColumns"/>
+                </set>
+                WHERE
+                id=#{id}
+            </update>
+
+            <!-- 新增表t_account信息 -->
+            <insert id="addTAccount">
+                INSERT INTO t_account (
+                    id
+                    ,user_id
+                    ,total
+                    ,used
+                    ,residue
+                ) VALUES (
+                    #{id}
+                    ,#{userId}
+                    ,#{total}
+                    ,#{used}
+                    ,#{residue}
+                )
+            </insert>
+</mapper>

@@ -1,0 +1,13 @@
+#服务名称
+spring:
+  application:
+    name: cloub-nacos-request
+  cloud:
+    nacos:
+      config:
+        import-check:
+          enabled: false
+      discovery:
+        server-addr: localhost:8848 # 服务注册地址
+
+

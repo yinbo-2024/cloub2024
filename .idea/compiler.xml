@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="cloub_consul_LoadBalanced_call" />
+        <module name="cloub_seata_account" />
+        <module name="cloub_rabbitmq" />
+        <module name="cloub_api_common" />
+        <module name="generator_mybatis" />
+        <module name="cloub_consul_dao" />
+        <module name="cloub_gateway" />
+        <module name="cloub_nacos_request" />
+        <module name="cloub_seata_stroage" />
+        <module name="cloub_redis" />
+        <module name="cloub_seata_order" />
+        <module name="cloub_sentinel_service" />
+        <module name="cloub_sentinel_gateway_service" />
+        <module name="cloub_nacos_dao" />
+        <module name="cloub_consul_openFeign_call" />
+        <module name="cloub_nacos_config" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="cloub_consul_dao2" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_STRING" value="-parameters" />
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="cloub2024" options="" />
+      <module name="cloub_api_common" options="" />
+      <module name="cloub_consul_LoadBalanced_call" options="" />
+      <module name="cloub_consul_dao" options="" />
+      <module name="cloub_consul_dao2" options="" />
+      <module name="cloub_consul_openFeign_call" options="" />
+      <module name="cloub_gateway" options="" />
+      <module name="cloub_nacos_config" options="" />
+      <module name="cloub_nacos_dao" options="" />
+      <module name="cloub_nacos_request" options="" />
+      <module name="cloub_rabbitmq" options="" />
+      <module name="cloub_redis" options="" />
+      <module name="cloub_seata_account" options="" />
+      <module name="cloub_seata_order" options="" />
+      <module name="cloub_seata_stroage" options="" />
+      <module name="cloub_sentinel_gateway_service" options="" />
+      <module name="cloub_sentinel_service" options="" />
+      <module name="generator_mybatis" options="" />
+    </option>
+  </component>
+</project>

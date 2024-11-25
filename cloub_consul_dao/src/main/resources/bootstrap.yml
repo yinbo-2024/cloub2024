@@ -1,0 +1,18 @@
+#服务注册
+spring:
+  application:
+    name: cloub-consul-dao
+
+  cloud:
+    consul:
+      host: localhost
+      port: 8500
+      discovery:
+        prefer-ip-address: true  #优先 地址注册
+        service-name: ${spring.application.name}
+      #远程从 consul上 取配置文件  服务名-dev/prod
+#      config:
+#        profile-separator: '-'
+#        format: YAML
+#        watch:
+#          wait-time: 1  #自动刷新时间 1秒

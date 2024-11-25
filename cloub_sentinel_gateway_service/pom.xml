@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.atguigu.cloub</groupId>
+        <artifactId>cloub2024</artifactId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+
+    <artifactId>cloub_sentinel_gateway_service</artifactId>
+
+    <properties>
+        <maven.compiler.source>8</maven.compiler.source>
+        <maven.compiler.target>8</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+     <dependencies>
+         <!--        bootstrap 读取配置文件要用-->
+         <dependency>
+             <groupId>org.springframework.cloud</groupId>
+             <artifactId>spring-cloud-starter-bootstrap</artifactId>
+         </dependency>
+
+         <!--nacos 服务注册-->
+         <dependency>
+             <groupId>com.alibaba.cloud</groupId>
+             <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
+         </dependency>
+<!--         nacos 配置文件 所需 -->
+         <dependency>
+             <groupId>com.alibaba.cloud</groupId>
+             <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
+         </dependency>
+         <!--        gateway 网关-->
+         <dependency>
+             <groupId>org.springframework.cloud</groupId>
+             <artifactId>spring-cloud-starter-gateway</artifactId>
+         </dependency>
+         <!--         loadbalancer 配置文件 新版本需要-->
+         <dependency>
+             <groupId>org.springframework.cloud</groupId>
+             <artifactId>spring-cloud-starter-loadbalancer</artifactId>
+         </dependency>
+
+<!--         sentinel -->
+         <dependency>
+             <groupId>com.alibaba.csp</groupId>
+             <artifactId>sentinel-transport-simple-http</artifactId>
+         </dependency>
+<!--         sentinel 整合 gateway 的适配器-->
+         <dependency>
+             <groupId>com.alibaba.csp</groupId>
+             <artifactId>sentinel-spring-cloud-gateway-adapter</artifactId>
+         </dependency>
+<!--          注解 需要引入的包 -->
+         <dependency>
+             <groupId>javax.annotation</groupId>
+             <artifactId>javax.annotation-api</artifactId>
+             <scope>compile</scope>
+         </dependency>
+     </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+</project>

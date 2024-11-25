@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding" native2AsciiForPropertiesFiles="true" defaultCharsetForPropertiesFiles="UTF-8">
+    <file url="file://$PROJECT_DIR$/cloub_api_common/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloub_api_common/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloub_consul_LoadBalanced_call/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloub_consul_LoadBalanced_call/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloub_consul_dao/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloub_consul_dao/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloub_consul_dao2/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloub_consul_dao2/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloub_consul_openFeign_call/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloub_consul_openFeign_call/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloub_consul_request/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloub_consul_request/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloub_gateway/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloub_gateway/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloub_nacos_config/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloub_nacos_config/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloub_nacos_dao/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloub_nacos_dao/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloub_nacos_request/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloub_nacos_request/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloub_rabbitmq/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloub_rabbitmq/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloub_redis/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloub_redis/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloub_seata_account/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloub_seata_account/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloub_seata_order/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloub_seata_order/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloub_seata_stroage/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloub_seata_stroage/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloub_sentinel_gateway_service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloub_sentinel_gateway_service/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloub_sentinel_service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloub_sentinel_service/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/generator_mybatis/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/generator_mybatis/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/resources" charset="UTF-8" />
+  </component>
+</project>

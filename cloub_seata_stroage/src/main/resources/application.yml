@@ -1,0 +1,50 @@
+#服务端口号
+server:
+  port: 8013
+#服务名称
+spring:
+  application:
+    name: cloub-seata-stroage
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource # 设置类型为 DruidDataSource
+    driver-class-name: com.mysql.jdbc.Driver # 数据库连接驱动
+    url: jdbc:mysql://localhost:3306/seta_storage?useSSL=false&useUnicode=true&characterEncoding=UTF-8
+    username: root
+    password: root
+  # 服务注册中心
+  cloud:
+    nacos:
+      config:
+        import-check:
+          enabled: false
+      discovery:
+        server-addr: localhost:8848 # 服务注册地址
+
+
+#mybatis 初始化 xml 位置
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package:
+  configuration:
+    map-underscore-to-camel-case: true
+
+
+
+seata:
+  registry:
+    type: nacos
+    nacos:
+      server-addr: localhost:8848
+      namespace: ""
+      group: SEATA_GROUP
+      application: seata-server
+  tx-service-group: default_tx_group  # 事务组，获取 tc 服务集群的名称
+  service:
+    vgroup-mapping:
+      default_tx_group: default  # 事务组与集群 tc 的映射关系
+  data-source-proxy-mode: AT
+
+logging:
+  level:
+    io:
+      seata: info

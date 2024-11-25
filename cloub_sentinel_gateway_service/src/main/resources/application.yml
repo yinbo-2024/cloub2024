@@ -1,0 +1,22 @@
+#服务端口号
+server:
+  port: 8010
+#服务名称
+
+#网关配置
+spring:
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+      #      路由 配置
+      routes:
+        - id: sentinel_route
+          uri: lb://cloub-nacos-config
+          predicates:
+            - Path=/**
+          filters:
+            - PrefixPath=/nacosOpenFeign
+
+
