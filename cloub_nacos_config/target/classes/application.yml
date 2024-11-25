@@ -1,8 +1,0 @@
-server:
-  port: 8004
-
-
-  #nacos 自动环境公式  ${spring.application.name}-${spring.profiles.active}.${spring.cloud.nacos.config.file-extension}
-#spring:
-#  profiles:
-#    active: dev
